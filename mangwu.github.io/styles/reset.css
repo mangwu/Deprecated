@@ -1,0 +1,4 @@
+@import url(./colors.css);
+.logo .ant-avatar-circle {
+  /* border: 1px solid var(--headerColor); */
+}

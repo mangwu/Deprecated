@@ -1,0 +1,153 @@
+@import url(./colors.css);
+@import url(./variable.css);
+
+#root {
+  position: relative;
+}
+.header {
+  display: flex;
+  height: 64px;
+  box-shadow: 0 2px 10px 0 var(--headerShadowColor);
+  position: static;
+  width: 100%;
+  z-index: 999;
+}
+.logo {
+  line-height: 64px;
+  margin: 0 8px;
+}
+.header-nav {
+  font-size: 16px;
+  vertical-align: middle;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.header-nav-item {
+  display: inline-block;
+  color: var(--headerColor);
+  height: 64px;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 64px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.header-nav-item a {
+  line-height: 1;
+  color: var(--headerColor);
+}
+.header-nav-item a:hover {
+  color: var(--primaryColor);
+}
+
+.change-theme {
+  position: fixed;
+  z-index: 999;
+  bottom: 36px;
+  right: 36px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: var(--themebg);
+
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  background-color: var(--primaryColor);
+}
+.change-theme svg {
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  margin: 8px;
+  opacity: 0.5;
+}
+@media screen and (max-width: 580px) {
+  .change-theme {
+    width: 48px;
+    height: 48px;
+  }
+  .change-theme svg {
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    margin: 6px;
+  }
+}
+
+.github-svg {
+  font-family: var(--notion-font);
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  fill: #70b7fd;
+  color: #fff;
+  position: absolute;
+  z-index: 1001;
+  top: 0;
+  right: 0;
+  border: 0;
+  transform: scale(1, 1);
+}
+
+.react-router {
+  margin-top: 64px;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--contentbg);
+  height: 100vh;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 580px) {
+  .wrapper {
+    width: 94%;
+    margin: 0 auto;
+  }
+}
+
+.page-cover-wrapper {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--notion-font);
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  outline: 0;
+  width: 100%;
+  height: 30vh;
+  min-height: 30vh;
+  max-height: 30vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px !important;
+  border-radius: 24px;
+  box-shadow: 2px 2px 8px 4px hsla(0, 0%, 6%, 0.1);
+}
+@media screen and (min-width: 1200px) {
+  .page-cover-wrapper {
+    margin-left: calc(50% - 600px);
+  }
+}
+.page-cover {
+  display: inline-block;
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+  border-radius: 24px;
+  /* object-fit: fill; */
+  object-fit: cover;
+  object-position: center 50%;
+}
